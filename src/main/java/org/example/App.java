@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.practices.RepeatingCharactersBySorting;
+
 /**
  * Hello world!
  *
@@ -7,8 +9,10 @@ package org.example;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println("Hello world!");
+    public static void main( String[] args ) {
+
+        RepeatingCharactersBySorting repeatingCharactersBySorting = new RepeatingCharactersBySorting();
+        System.out.println(repeatingCharactersBySorting.repeatingCharactersBySorting("ab.ca*cedg.fee.sfes*ss"));
+
     }
 }
