@@ -1,8 +1,8 @@
 package org.example.practices;
 
-public class RepeatingCharactersUsingMarking {
+public class RepeatingLettersUsingMarking {
 
-    public String findRepeatingCharactersUsingMarking(String str){
+    public String findRepeatingLettersUsingMarking(String str){
 
         int charCount = 0;
 

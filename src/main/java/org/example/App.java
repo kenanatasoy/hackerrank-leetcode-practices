@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.practices.RepeatingCharactersBySorting;
+import org.example.practices.RepeatingLettersUsingMarking;
 
 /**
  * Hello world!
@@ -11,8 +11,8 @@ public class App
 {
     public static void main( String[] args ) {
 
-        RepeatingCharactersBySorting repeatingCharactersBySorting = new RepeatingCharactersBySorting();
-        System.out.println(repeatingCharactersBySorting.repeatingCharactersBySorting("ab.ca*cedg.fee.sfes*ss"));
+        RepeatingLettersUsingMarking repeatingLettersUsingMarking = new RepeatingLettersUsingMarking();
+        System.out.println(repeatingLettersUsingMarking.findRepeatingLettersUsingMarking("fdgfdgsdbtybsdşskhs"));
 
     }
 }

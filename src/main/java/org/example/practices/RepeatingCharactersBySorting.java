@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class RepeatingCharactersBySorting {
 
-    public String repeatingCharactersBySorting(String str){
+    public String findRepeatingCharactersBySorting(String str){
 
         char[] charArray = str.toCharArray();
         Arrays.sort(charArray);

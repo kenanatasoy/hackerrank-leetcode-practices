@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class RepeatingCharactersUsingMapSimplified {
 
-    public String repeatingCharactersUsingMapSimplified(String str){
+    public String findRepeatingCharactersUsingMapSimplified(String str){
 
         Map<Character, Integer> charCountMap = new LinkedHashMap<>();
 
