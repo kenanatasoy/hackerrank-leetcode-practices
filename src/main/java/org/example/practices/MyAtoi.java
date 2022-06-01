@@ -39,12 +39,6 @@ public class MyAtoi {
 
         return 0;
 
-
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println(myAtoi("3.14159"));
     }
 
 
