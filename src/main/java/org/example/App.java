@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.practices.LongestCommonPrefix;
+import java.util.Scanner;
 
 import static java.lang.System.*;
 
@@ -9,12 +9,33 @@ import static java.lang.System.*;
  *
  */
 
-public class App
-{
+public class App {
 
-    public static void main( String[] args ) throws Exception {
+    static String str = "code";
 
-        out.println(new LongestCommonPrefix().longestCommonPrefix(new String[]{"caa","","a","acb"}));
+    private static String strMethod(String... strArr){
+        String stringToReturn = "";
+        for (String s : strArr) {
+            if (s.contains(str)){
+                stringToReturn = s;
+            }
+        }
+        return stringToReturn;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String[] strArr = new String[5];
+
+        for (int i = 0; i < 5; i++){
+            strArr[i] = sc.nextLine();
+        }
+
+        sc.close();
+        if(!strMethod(strArr).equals("")){
+            out.println("Tanımlı value yu içeren String deger: " + strMethod(strArr));
+        }
 
     }
 }
