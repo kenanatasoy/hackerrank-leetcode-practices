@@ -1,15 +1,10 @@
-package org.example;
+package org.example.practices;
 
 import java.util.Scanner;
 
 import static java.lang.System.*;
 
-/**
- * Hello world!
- *
- */
-
-public class App {
+public class CheckBlankInputLine {
 
     static String str = "code";
 
@@ -26,9 +21,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(in);
         String[] strArr = new String[5];
-
 
         boolean isBlank = false;
 
@@ -49,7 +43,7 @@ public class App {
         sc.close();
 
         if(!strMethod(strArr).equals("")){
-            out.println("Tanımlı value yu içeren String deger: " + strMethod(strArr));
+            out.println("Tanımlı value'yu içeren String değer: " + strMethod(strArr));
         }
 
 

@@ -1,81 +1,51 @@
 package org.example.practices;
 
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
+import java.util.regex.*;
 
-import static java.lang.System.out;
+import static java.lang.System.*;
 
 public class UKAndUSRegex2 {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(in);
 
-        int N = sc.nextInt();
-
-        //TODO: to be fixed
+        int n = sc.nextInt();
 
         sc.nextLine();
 
-        StringBuilder sBuilder = new StringBuilder();
+        String[] strArr1 = new String[n];
 
-        for(int i = 0; i < N; i++) {
-            sBuilder.append(sc.nextLine());
+        for(int i = 0; i < n; i++) {
+            strArr1[i] = sc.nextLine();
         }
 
-        String stringToMatch = sBuilder.toString();
+        String strToBeTested = String.join(" ", strArr1);
 
-        int T = sc.nextInt();
+        int t = sc.nextInt();
+        sc.nextLine();
 
-        String[] strArr = new String[T];
+        String[] strArr2 = new String[t];
 
-        for(int i = 0; i < T; i++){
-            strArr[i] = sc.next();
+        for(int i = 0; i < t; i++) {
+            strArr2[i] = sc.nextLine().replaceAll("our", "or");
         }
 
-        for(int i = 0; i < T; i++){
+        long[] count = new long[t];
 
-            long count = 0L;
+        for(int i = 0; i < t; i++){
 
-            if(Pattern.matches(".*ou?r.*", stringToMatch)){
+            Pattern pattern = Pattern.compile("\\b" + strArr2[i] + "\\b");
 
-                int index = strArr[i].indexOf("u");
+            Matcher matcher = pattern.matcher(strToBeTested.replaceAll("our", "or"));
 
-                if(index == -1){
-
-                    Pattern pattern = Pattern.compile(strArr[i]);
-                    Matcher matcher = pattern.matcher(stringToMatch);
-
-                    count = matcher.results().count();
-                    out.println(count);
-                }
-
-                else {
-                    StringBuilder strBuilder = new StringBuilder(strArr[i]);
-                    //String newStringToMatch = strArr[i].substring(0, index + 1) + "?" + strArr[i].substring(index + 2);
-                    strBuilder.insert(index + 1, "?");
-
-                    Pattern pattern = Pattern.compile(strBuilder.toString());
-                    Matcher matcher = pattern.matcher(stringToMatch);
-
-                    count = matcher.results().count();
-
-                    out.println(count);
-
-                }
-
-            }
-
-            else {
-
-                out.println(0);
-            }
-
-
-
+            count[i] = matcher.results().count();
 
         }
+
+        Arrays.stream(count).forEach(out::println);
+
 
     }
 }
