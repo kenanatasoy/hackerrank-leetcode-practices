@@ -7,12 +7,14 @@ import java.util.stream.Stream;
 
 public class ContiguousSubArrays {
 
+//    TODO:
+
     public void contiguousSubArrays() throws IOException {
 
         BufferedReader bF = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(bF.readLine());
         int[] A = Stream.of(bF.readLine().split(" "))
-                .map(Integer::parseInt)
+                .map(Integer::valueOf)
                 .mapToInt(i -> i)
                 .toArray();
 
@@ -27,7 +29,6 @@ public class ContiguousSubArrays {
 
                 if(total < 0)
                     subArrayCount++;
-
 
             }
 

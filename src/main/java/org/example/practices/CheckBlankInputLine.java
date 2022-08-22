@@ -43,9 +43,8 @@ public class CheckBlankInputLine {
         sc.close();
 
         if(!strMethod(strArr).equals("")){
-            out.println("Tanımlı value'yu içeren String değer: " + strMethod(strArr));
+            out.println("The line that contains the searched value: " + strMethod(strArr));
         }
-
 
     }
 }

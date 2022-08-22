@@ -1,57 +1,44 @@
 package org.example;
 
-import java.util.Scanner;
+import org.example.practices.LinkedListNode;
 
 import static java.lang.System.*;
 
-/**
- * Hello world!
- *
- */
-
 public class App {
-
-    static String str = "code";
-
-    private static String strMethod(String... strArr){
-        String stringToReturn = "";
-        for (String s : strArr) {
-            if (s.contains(str)){
-                stringToReturn = s;
-                break;
-            }
-        }
-        return stringToReturn;
-    }
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        String[] strArr = new String[5];
+        LinkedListNode linkedListNode1 =
+                new LinkedListNode();
+        linkedListNode1.val = 4;
+//        LinkedListNode linkedListNode2 = new LinkedListNode();
+//        linkedListNode2.val = 5;
+//        LinkedListNode linkedListNode3 = new LinkedListNode();
+//        linkedListNode3.val = 2;
 
+//        linkedListNode1.next = linkedListNode2;
+//        linkedListNode2.next = linkedListNode3;
+//        linkedListNode3.next = null;
 
-        boolean isBlank = false;
+//        int i = in.read(); //
+//        out.println(i);
 
-        for (int i = 0; i < 5 || isBlank;){
+//        Random rand = new Random();
+//        int rdNum = rand.nextInt( (max - min) + 1 ) + min; // min-max included
+//        out.println();
 
-            if( (strArr[i] = sc.nextLine()).isBlank() ){
-                out.println("please don't input blank line");
-                isBlank = true;
-            }
-
-            else {
-                i++;
-                isBlank = false;
-            }
-
-        }
-
-        sc.close();
-
-        if(!strMethod(strArr).equals("")){
-            out.println("Tanımlı value yu içeren String deger: " + strMethod(strArr));
-        }
+        char[][] grid = new char[][]
+                {{'S', '.', '.', '#', '.', '.', '.'},
+                 {'.', '#', '.', '.', '.', '#', '.'},
+                 {'.', '#', '.', '.', '.', '.', '.'},
+                 {'.', '.', '#', '#', '.', '.', '.'},
+                 {'#', '.', '#', 'E', '.', '#', '.'}};
 
 
     }
+
+
+
+
 }
+

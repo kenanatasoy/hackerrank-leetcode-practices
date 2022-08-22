@@ -14,4 +14,5 @@ public class ValidAnagram {
         return Arrays.equals(ch1, ch2);
 
     }
+
 }

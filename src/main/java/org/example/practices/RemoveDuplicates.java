@@ -7,13 +7,11 @@ public class RemoveDuplicates {
         int i = 0;
         int uniqueArrLength = 0;
 
-        outerloop:
-        while(i<nums.length){
+        while (i < nums.length) {
 
             int j = 1;
 
-            innerloop:
-            while(i+j != nums.length && nums[i] == nums[i+j]){
+            while (i + j != nums.length && nums[i] == nums[i + j]) {
                 j++;
             }
 

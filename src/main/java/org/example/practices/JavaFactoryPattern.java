@@ -8,13 +8,13 @@ interface Food {
 
 class Pizza implements Food {
     public String getType() {
-        return "Someone ordered a Fast Food!";
+        return "Someone ordered a Pizza!";
     }
 }
 
 class Cake implements Food {
     public String getType() {
-        return "Someone ordered a Dessert!";
+        return "Someone ordered a Cake!";
     }
 }
 

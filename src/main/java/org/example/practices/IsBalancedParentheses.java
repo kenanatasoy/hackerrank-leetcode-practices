@@ -20,7 +20,6 @@ class IsBalancedParentheses{
         charMap.put(']', '[');
 
 
-        // {}(
         for (int i = 0; i < string.length(); i++) {
 
             char reverseChar = charMap.get(string.charAt(i));

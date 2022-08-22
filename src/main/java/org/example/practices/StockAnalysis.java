@@ -7,6 +7,9 @@ import java.util.*;
 
 public class StockAnalysis {
 
+//    TODO:
+//    find the challenge on hackerrank
+
     public static void stockAnalysis() throws IOException {
 
         BufferedReader bF = new BufferedReader(new InputStreamReader(System.in));
