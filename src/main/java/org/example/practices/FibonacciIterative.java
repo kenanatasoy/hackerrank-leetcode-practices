@@ -9,7 +9,7 @@ public class FibonacciIterative {
         //0 1 1 2 3 5
         //1 2 3 4 5 6
 
-        int number = 6;
+        int number = 4;
 
         fibonacciNumberIterative(number);
 
@@ -20,18 +20,26 @@ public class FibonacciIterative {
     private static void fibonacciNumberIterative(int number){
 
         // a b k
-        // 5 8 13
+        // 0 1 2
         long k, a = 0, b = 1;
-        k = 0;
 
         out.print("0 1 ");
 
-        while(k < number){ //TODO:
+        int i = 0;
+        while (i < number - 2) {
             k = a + b;
             out.print(k + " ");
             a = b;
             b = k;
+            i++;
         }
+
+//        for (int i = 0; i < number - 2; i++) {
+//            k = a + b;
+//            out.print(k + " ");
+//            a = b;
+//            b = k;
+//        }
 
     }
 }

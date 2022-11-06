@@ -1,18 +1,20 @@
 package org.example.practices;
 
+// Reverse Integer: https://leetcode.com/problems/reverse-integer/
+
 public class ReverseInteger {
-    public int reverse(int x) {
+    public int reverseInteger(int input) { // for => byte, short, int, long
 
         long reversed = 0;
 
-        while( x != 0){
+        while( input != 0){
 
-            reversed = reversed * 10 + x % 10;
+            reversed = reversed * 10 + input % 10;
 
-            x /= 10;
+            input /= 10;
 
             if (reversed < Integer.MIN_VALUE || reversed > Integer.MAX_VALUE)
-                return 0;
+                throw new RuntimeException("Reversed integer exceeds int limits.");
 
         }
 
